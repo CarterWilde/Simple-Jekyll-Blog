@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<div class="wrapper">
+  <div class="posts">
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="post-link">
+      <p>{{ post.title }}</p>
+      <p class="date">{{ post.date | date: "%B %-d, %Y" }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</div>

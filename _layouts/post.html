@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<a href="/" class="back-button"></a>
+<div class="wrapper">
+  <div href="{{ page.url }}" class="post">
+    <div class="overlay-section title">
+      <p>{{ page.title }}</p>
+      <p class="date">{{ page.date | date: "%B %-d, %Y" }}</p>
+    </div>
+    <div class="overlay-section">
+      {{ content }}
+    </div>
+  </div>
+</div>
