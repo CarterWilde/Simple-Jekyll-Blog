@@ -31,9 +31,15 @@ body
   background: linear-gradient(45deg, rgba(3,255,112,1) 0%, rgba(0,171,214,1) 100%)
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03ff70', endColorstr='#00abd6', GradientType=1 )
   overflow: auto
+  @media screen and (max-width: 425px)
+    display: flex
+    justify-content: center
 
 .posts
   width: 80%
+  @media screen and (max-width: 425px)
+    width: 100%
+    font-size: .5em
   .post-link
     display: grid
     grid-template-columns: 2fr 1fr
