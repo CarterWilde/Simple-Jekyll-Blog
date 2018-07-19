@@ -37,12 +37,14 @@ body
   .post-link
     display: grid
     grid-template-columns: 2fr 1fr
-    margin: 2%
     padding: 3%
     color: $font-color
     font-size: 2em
     background-color: $overlay-color
     text-decoration: none
+    border-bottom: 1px solid rgba(0, 0, 0, .15)
+    &:last-child
+      border-bottom: none
   .date
     text-align: right
 .title
@@ -69,6 +71,25 @@ body
   background-position: 58% 50%
   background-size: 60%
   transform: rotate(180deg)
+.previous
+  padding: 2vw
+  display: inline-block
+  background-image: url("/assets/images/arrow.svg")
+  background-repeat: no-repeat
+  background-position: 58% 50%
+  background-size: 60%
+  transform: scale(-1)
+.next
+  padding: 2vw
+  display: inline-block
+  background-image: url("/assets/images/arrow.svg")
+  background-repeat: no-repeat
+  background-position: 58% 50%
+  background-size: 60%
+.center
+  display: flex
+  align-items: center
+  justify-content: center
 .not-found
   text-align: center
   color: $font-color

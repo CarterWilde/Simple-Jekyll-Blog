@@ -3,11 +3,23 @@ layout: default
 ---
 <div class="wrapper">
   <div class="posts">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     <a href="{{ post.url }}" class="post-link">
       <p>{{ post.title }}</p>
       <p class="date">{{ post.date | date: "%B %-d, %Y" }}</p>
     </a>
     {% endfor %}
+    <!-- Pagination Links -->
+    {%- if paginator.total_pages > 1 -%}
+      <div class="overlay-section center">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="previous"></a>
+        {% endif %}
+        <span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="next"></a>
+        {% endif %}
+      </div>
+    {%- endif -%}
   </div>
 </div>
