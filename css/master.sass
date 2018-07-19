@@ -42,21 +42,23 @@ body
     font-size: 2em
     background-color: $overlay-color
     text-decoration: none
-    border-bottom: 1px solid rgba(0, 0, 0, .15)
+    border-bottom: $underline
     &:last-child
       border-bottom: none
   .date
     text-align: right
 .title
   display: grid
-  grid-template-columns: 1fr 1fr
-  p:nth-child(2)
+  grid-template-columns: .05fr 1fr 1fr
+  border-bottom: $underline
+  .text
+    padding-left: 5%
+  p:nth-child(3)
     text-align: right
 .post
   width: 80%
 .overlay-section
-  margin: 2%
-  padding: 3%
+  padding: 2%
   color: $font-color
   font-size: 1.5em
   background-color: $overlay-color
@@ -72,20 +74,20 @@ body
   background-size: 60%
   transform: rotate(180deg)
 .previous
-  padding: 2vw
+  padding: 1vw
   display: inline-block
   background-image: url("/assets/images/arrow.svg")
   background-repeat: no-repeat
   background-position: 58% 50%
-  background-size: 60%
+  background-size: 80%
   transform: scale(-1)
 .next
-  padding: 2vw
+  padding: 1vw
   display: inline-block
   background-image: url("/assets/images/arrow.svg")
   background-repeat: no-repeat
   background-position: 58% 50%
-  background-size: 60%
+  background-size: 80%
 .center
   display: flex
   align-items: center
